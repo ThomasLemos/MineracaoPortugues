@@ -1,0 +1,107 @@
+[
+  {
+    "id": 0,
+    "target_inference_type": "pronominal bridging",
+    "classification_model": "curious008/BertForStorySkillClassification",
+    "document_title": "CIENCIA_DA_COMPUTACAO",
+    "context_snippet": "CIENCIA_DA_COMPUTACAO",
+    "expected_answer": "A primeira ferramenta conhecida para a computação foi o ábaco, cuja invenção é atribuída a habitantes da Mesopotâmia, em torno de 2700–2300 a.C..",
+    "input_prompt_full": "<|user|>\n[INSTRUÇÃO]\nTAREFA: Gere uma pergunta de múltipla escolha para o tipo de inferência 'pronominal bridging'.\nREGRAS: A saída deve aderir estritamente ao formato: NOVO_TIPO, RACIOCÍNIO, PERGUNTA, OPÇÕES. Todo o texto gerado (RACIOCÍNIO, PERGUNTA, OPÇÕES) DEVE estar em PORTUGUÊS.\n\nExemplo:\nTIPO: pronominal bridging\nCONTEXTO: Uma estufa é uma construção onde plantas como flores e vegetais são cultivados. Ela geralmente tem um teto de vidro ou plástico translúcido.\nRESPOSTA: estufas\nRACIOCÍNIO: O pronome 'Ela' se refere à 'estufa' na frase anterior, fazendo a ligação entre os conceitos.\nPERGUNTA: De acordo com a passagem, o que pode ter tetos de plástico translúcido?\nOPÇÕES: quintais; salas de estar; estufas; jardins botânicos\n\nNOVO_CONTEXTO: {context}\nNOVA_RESPOSTA: {answer}\nNOVO_TIPO: pronominal bridging\nRACIOCÍNIO: (Gere o raciocínio para a nova pergunta AQUI, em PORTUGUÊS)\nPERGUNTA: (Gere o tema da nova pergunta AQUI, em PORTUGUÊS)\nOPÇÕES: (Gere 4 opções, separadas por ponto e vírgula, em PORTUGUÊS)\n<|end|><|assistant|>",
+    "generated_question_stem_rq1": "De acordo com a passagem, onde as pessoas podem ler e estudar, oferecendo uma variedade de livros e recursos educacionais?",
+    "generated_reasoning_cot_rq3": "O pronome 'Ela' se refere à 'biblioteca' na frase anterior, estabelecendo uma ligação entre o conceito de um local de leitura e o termo 'biblioteca'.",
+    "predicted_skill_label_rq2": "Outcome Resolution",
+    "probabilities_by_class": {
+      "Character": 0.15838761627674103,
+      "Setting": 0.17191030085086823,
+      "Feeling": 0.14440417289733887,
+      "Action": 0.10970605909824371,
+      "Causal Relationship": 0.0838654637336731,
+      "Outcome Resolution": 0.17516963183879852,
+      "Prediction": 0.15655677020549774
+    }
+  },
+  {
+    "id": 1,
+    "target_inference_type": "pronominal bridging",
+    "classification_model": "curious008/BertForStorySkillClassification",
+    "document_title": "CIENCIA_DA_COMPUTACAO",
+    "context_snippet": "CIENCIA_DA_COMPUTACAO",
+    "expected_answer": "A primeira ferramenta conhecida para a computação foi o ábaco, cuja invenção é atribuída a habitantes da Mesopotâmia, em torno de 2700–2300 a.C..",
+    "input_prompt_full": "<|user|>\n[INSTRUÇÃO]\nTAREFA: Gere uma pergunta de múltipla escolha para o tipo de inferência 'pronominal bridging'.\nREGRAS: A saída deve aderir estritamente ao formato: NOVO_TIPO, RACIOCÍNIO, PERGUNTA, OPÇÕES. Todo o texto gerado (RACIOCÍNIO, PERGUNTA, OPÇÕES) DEVE estar em PORTUGUÊS.\n\nExemplo:\nTIPO: pronominal bridging\nCONTEXTO: Uma estufa é uma construção onde plantas como flores e vegetais são cultivados. Ela geralmente tem um teto de vidro ou plástico translúcido.\nRESPOSTA: estufas\nRACIOCÍNIO: O pronome 'Ela' se refere à 'estufa' na frase anterior, fazendo a ligação entre os conceitos.\nPERGUNTA: De acordo com a passagem, o que pode ter tetos de plástico translúcido?\nOPÇÕES: quintais; salas de estar; estufas; jardins botânicos\n\nNOVO_CONTEXTO: {context}\nNOVA_RESPOSTA: {answer}\nNOVO_TIPO: pronominal bridging\nRACIOCÍNIO: (Gere o raciocínio para a nova pergunta AQUI, em PORTUGUÊS)\nPERGUNTA: (Gere o tema da nova pergunta AQUI, em PORTUGUÊS)\nOPÇÕES: (Gere 4 opções, separadas por ponto e vírgula, em PORTUGUÊS)\n<|end|><|assistant|>",
+    "generated_question_stem_rq1": "De acordo com a passagem, onde as pessoas podem ler e estudar, oferecendo uma variedade de livros e recursos educacionais?",
+    "generated_reasoning_cot_rq3": "O pronome 'Ela' se refere à 'biblioteca' na frase anterior, estabelecendo uma ligação entre o conceito de um local de leitura e o termo 'biblioteca'.",
+    "predicted_skill_label_rq2": "Outcome Resolution",
+    "probabilities_by_class": {
+      "Character": 0.15838761627674103,
+      "Setting": 0.17191030085086823,
+      "Feeling": 0.14440417289733887,
+      "Action": 0.10970605909824371,
+      "Causal Relationship": 0.0838654637336731,
+      "Outcome Resolution": 0.17516963183879852,
+      "Prediction": 0.15655677020549774
+    }
+  },
+  {
+    "id": 2,
+    "target_inference_type": "pronominal bridging",
+    "classification_model": "curious008/BertForStorySkillClassification",
+    "document_title": "CIENCIA_DA_COMPUTACAO",
+    "context_snippet": "CIENCIA_DA_COMPUTACAO",
+    "expected_answer": "A primeira ferramenta conhecida para a computação foi o ábaco, cuja invenção é atribuída a habitantes da Mesopotâmia, em torno de 2700–2300 a.C..",
+    "input_prompt_full": "<|user|>\n[INSTRUÇÃO]\nTAREFA: Gere uma pergunta de múltipla escolha para o tipo de inferência 'pronominal bridging'.\nREGRAS: A saída deve aderir estritamente ao formato: NOVO_TIPO, RACIOCÍNIO, PERGUNTA, OPÇÕES. Todo o texto gerado (RACIOCÍNIO, PERGUNTA, OPÇÕES) DEVE estar em PORTUGUÊS.\n\nExemplo:\nTIPO: pronominal bridging\nCONTEXTO: Uma estufa é uma construção onde plantas como flores e vegetais são cultivados. Ela geralmente tem um teto de vidro ou plástico translúcido.\nRESPOSTA: estufas\nRACIOCÍNIO: O pronome 'Ela' se refere à 'estufa' na frase anterior, fazendo a ligação entre os conceitos.\nPERGUNTA: De acordo com a passagem, o que pode ter tetos de plástico translúcido?\nOPÇÕES: quintais; salas de estar; estufas; jardins botânicos\n\nNOVO_CONTEXTO: {context}\nNOVA_RESPOSTA: {answer}\nNOVO_TIPO: pronominal bridging\nRACIOCÍNIO: (Gere o raciocínio para a nova pergunta AQUI, em PORTUGUÊS)\nPERGUNTA: (Gere o tema da nova pergunta AQUI, em PORTUGUÊS)\nOPÇÕES: (Gere 4 opções, separadas por ponto e vírgula, em PORTUGUÊS)\n<|end|><|assistant|>",
+    "generated_question_stem_rq1": "De acordo com a passagem, onde as pessoas podem ler e estudar, oferecendo uma variedade de livros e recursos educacionais?",
+    "generated_reasoning_cot_rq3": "O pronome 'Ela' se refere à 'biblioteca' na frase anterior, estabelecendo uma ligação entre o conceito de um local de leitura e o termo 'biblioteca'.",
+    "predicted_skill_label_rq2": "Outcome Resolution",
+    "probabilities_by_class": {
+      "Character": 0.15838761627674103,
+      "Setting": 0.17191030085086823,
+      "Feeling": 0.14440417289733887,
+      "Action": 0.10970605909824371,
+      "Causal Relationship": 0.0838654637336731,
+      "Outcome Resolution": 0.17516963183879852,
+      "Prediction": 0.15655677020549774
+    }
+  },
+  {
+    "id": 3,
+    "target_inference_type": "pronominal bridging",
+    "classification_model": "curious008/BertForStorySkillClassification",
+    "document_title": "CIENCIA_DA_COMPUTACAO",
+    "context_snippet": "CIENCIA_DA_COMPUTACAO",
+    "expected_answer": "A primeira ferramenta conhecida para a computação foi o ábaco, cuja invenção é atribuída a habitantes da Mesopotâmia, em torno de 2700–2300 a.C..",
+    "input_prompt_full": "<|user|>\n[INSTRUÇÃO]\nTAREFA: Gere uma pergunta de múltipla escolha para o tipo de inferência 'pronominal bridging'.\nREGRAS: A saída deve aderir estritamente ao formato: NOVO_TIPO, RACIOCÍNIO, PERGUNTA, OPÇÕES. Todo o texto gerado (RACIOCÍNIO, PERGUNTA, OPÇÕES) DEVE estar em PORTUGUÊS.\n\nExemplo:\nTIPO: pronominal bridging\nCONTEXTO: Uma estufa é uma construção onde plantas como flores e vegetais são cultivados. Ela geralmente tem um teto de vidro ou plástico translúcido.\nRESPOSTA: estufas\nRACIOCÍNIO: O pronome 'Ela' se refere à 'estufa' na frase anterior, fazendo a ligação entre os conceitos.\nPERGUNTA: De acordo com a passagem, o que pode ter tetos de plástico translúcido?\nOPÇÕES: quintais; salas de estar; estufas; jardins botânicos\n\nNOVO_CONTEXTO: {context}\nNOVA_RESPOSTA: {answer}\nNOVO_TIPO: pronominal bridging\nRACIOCÍNIO: (Gere o raciocínio para a nova pergunta AQUI, em PORTUGUÊS)\nPERGUNTA: (Gere o tema da nova pergunta AQUI, em PORTUGUÊS)\nOPÇÕES: (Gere 4 opções, separadas por ponto e vírgula, em PORTUGUÊS)\n<|end|><|assistant|>",
+    "generated_question_stem_rq1": "De acordo com a passagem, onde as pessoas podem ler e estudar, oferecendo uma variedade de livros e recursos educacionais?",
+    "generated_reasoning_cot_rq3": "O pronome 'Ela' se refere à 'biblioteca' na frase anterior, estabelecendo uma ligação entre o conceito de um local de leitura e o termo 'biblioteca'.",
+    "predicted_skill_label_rq2": "Outcome Resolution",
+    "probabilities_by_class": {
+      "Character": 0.15838761627674103,
+      "Setting": 0.17191030085086823,
+      "Feeling": 0.14440417289733887,
+      "Action": 0.10970605909824371,
+      "Causal Relationship": 0.0838654637336731,
+      "Outcome Resolution": 0.17516963183879852,
+      "Prediction": 0.15655677020549774
+    }
+  },
+  {
+    "id": 4,
+    "target_inference_type": "pronominal bridging",
+    "classification_model": "curious008/BertForStorySkillClassification",
+    "document_title": "CIENCIA_DA_COMPUTACAO",
+    "context_snippet": "CIENCIA_DA_COMPUTACAO",
+    "expected_answer": "A primeira ferramenta conhecida para a computação foi o ábaco, cuja invenção é atribuída a habitantes da Mesopotâmia, em torno de 2700–2300 a.C..",
+    "input_prompt_full": "<|user|>\n[INSTRUÇÃO]\nTAREFA: Gere uma pergunta de múltipla escolha para o tipo de inferência 'pronominal bridging'.\nREGRAS: A saída deve aderir estritamente ao formato: NOVO_TIPO, RACIOCÍNIO, PERGUNTA, OPÇÕES. Todo o texto gerado (RACIOCÍNIO, PERGUNTA, OPÇÕES) DEVE estar em PORTUGUÊS.\n\nExemplo:\nTIPO: pronominal bridging\nCONTEXTO: Uma estufa é uma construção onde plantas como flores e vegetais são cultivados. Ela geralmente tem um teto de vidro ou plástico translúcido.\nRESPOSTA: estufas\nRACIOCÍNIO: O pronome 'Ela' se refere à 'estufa' na frase anterior, fazendo a ligação entre os conceitos.\nPERGUNTA: De acordo com a passagem, o que pode ter tetos de plástico translúcido?\nOPÇÕES: quintais; salas de estar; estufas; jardins botânicos\n\nNOVO_CONTEXTO: {context}\nNOVA_RESPOSTA: {answer}\nNOVO_TIPO: pronominal bridging\nRACIOCÍNIO: (Gere o raciocínio para a nova pergunta AQUI, em PORTUGUÊS)\nPERGUNTA: (Gere o tema da nova pergunta AQUI, em PORTUGUÊS)\nOPÇÕES: (Gere 4 opções, separadas por ponto e vírgula, em PORTUGUÊS)\n<|end|><|assistant|>",
+    "generated_question_stem_rq1": "De acordo com a passagem, onde as pessoas podem ler e estudar, oferecendo uma variedade de livros e recursos educacionais?",
+    "generated_reasoning_cot_rq3": "O pronome 'Ela' se refere à 'biblioteca' na frase anterior, estabelecendo uma ligação entre o conceito de um local de leitura e o termo 'biblioteca'.",
+    "predicted_skill_label_rq2": "Outcome Resolution",
+    "probabilities_by_class": {
+      "Character": 0.15838761627674103,
+      "Setting": 0.17191030085086823,
+      "Feeling": 0.14440417289733887,
+      "Action": 0.10970605909824371,
+      "Causal Relationship": 0.0838654637336731,
+      "Outcome Resolution": 0.17516963183879852,
+      "Prediction": 0.15655677020549774
+    }
+  }
+]
