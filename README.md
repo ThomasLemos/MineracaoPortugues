@@ -18,7 +18,7 @@ Caso queira modificar a quantidade de perguntas geradas na celula 4 modifique MA
 | Item | Nome do Arquivo | Função / Observação |
 | :--- | :--- | :--- |
 | **Script Principal** | `MineracaoGeracaoDePerguntaPortugues.ipynb` | Implementação completa do *pipeline* QG, classificação e salvamento. Contém o *prompt* **totalmente traduzido** para Português. |
-| **Fonte de Dados** | `dados_label_1.csv` | Dataset Faquad-NLI corrigido e filtrado para exemplos de alta qualidade (`label=1`). **Contexto de Entrada:** O texto da `answer` é usado como Contexto (substituto) no *prompt*. |
+| **Fonte de Dados** | `faquad.csv` | Dataset Faquad-NLI corrigido e filtrado para exemplos de alta qualidade (`label=1`). **Contexto de Entrada:** O texto da `answer` é usado como Contexto (substituto) no *prompt*. |
 | **Dataset Base** | `ruanchaves/faquad-nli` | Dataset Original (Hugging Face Hub) utilizado para extração e pré-processamento dos dados QA. |
 
 ---
