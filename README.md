@@ -57,10 +57,12 @@ Os resultados são salvos em formato JSON (faquad_qg_classification_results.json
 ## Análise de Resultados e Observações
 O arquivo de saída permite analisar as seguintes métricas, que refletem os achados do artigo base:
 
-| Métrica | Implicação Metodológica | Observações Típicas (Validação) |
-| Aderência ao Formato (RQ3 - Parsing) | Valida a força do prompt Few-Shot/CoT na replicação da estrutura formal. | Alto Sucesso: O LLM adere às tags RACIOCÍNIO: e PERGUNTA: corretamente. |
-| Qualidade da Pergunta (RQ1 - Coerência) | Avalia a coerência da pergunta gerada com o Contexto real.| "Falha de Coerência (Alucinação): O LLM falha em aplicar a inferência ao novo Contexto (CIENCIA_DA_COMPUTACAO), alucinando um tópico genérico (""biblioteca"") no Raciocínio gerado." |
-Acurácia do Tipo (RQ2 - Desvio) | Avalia se a pergunta gerada corresponde ao tipo de inferência alvo. | "Desvio Alto: Confirma a dificuldade do método: a pergunta gerada não corresponde ao tipo de inferência alvo, sendo classificada como Outcome Resolution." |
+| Métrica                                  | Implicação Metodológica                                                           | Observações Típicas (Validação)                                                                                                                                                 |
+|------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Aderência ao Formato (RQ3 - Parsing)     | Valida a força do prompt Few-Shot/CoT na replicação da estrutura formal.          | **Alto Sucesso:** O LLM adere às tags `RACIOCÍNIO:` e `PERGUNTA:` em Português corretamente.                                                                                     |
+| Qualidade da Pergunta (RQ1 - Coerência)  | Avalia a coerência da pergunta gerada com o Contexto real.                        | **Falha de Coerência (Alucinação):** O LLM falha em aplicar a inferência ao novo Contexto (`CIENCIA_DA_COMPUTACAO`), alucinando um tópico genérico (“biblioteca”) no raciocínio. |
+| Acurácia do Tipo (RQ2 - Desvio)          | Avalia se a pergunta gerada corresponde ao tipo de inferência alvo.               | **Desvio Alto:** Confirma a dificuldade do método: a pergunta gerada não corresponde ao tipo de inferência alvo, sendo classificada como *Outcome Resolution*.                   |
+
 
 ---
 
