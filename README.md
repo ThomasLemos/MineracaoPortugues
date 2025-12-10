@@ -9,7 +9,17 @@ investigando a capacidade de um Large Language Model (LLM) de gerar itens de Com
 ---
 ## Informação sobre o codigo
 
-Ambos codigos Scrpits foram feito para rodar no Colab no ambiente T4, o script MineracaoGeracaoDePerguntaPortugues.ipynb vai rodar o codigo e gerar as 5 primeiras pergunta do csv caso queira modificar a quantidade de perguntas geradas na celula 4 modifique MAX_EXAMPLES_TO_PROCESS = 5 para a quantidade desejada.
+Ambos codigos Scrpits foram feito para rodar no Colab no ambiente T4, o script MineracaoGeracaoDePerguntaPortugues.ipynb vai rodar o codigo e gerar as 5 primeiras pergunta do csv. 
+Caso queira modificar a quantidade de perguntas geradas na celula 4 modifique MAX_EXAMPLES_TO_PROCESS = 5 para a quantidade desejada.
+
+---
+## Scripts e Dados
+
+| Item | Nome do Arquivo | Função / Observação |
+| :--- | :--- | :--- |
+| **Script Principal** | `MineracaoGeracaoDePerguntaPortugues.ipynb` | Implementação completa do *pipeline* QG, classificação e salvamento. Contém o *prompt* **totalmente traduzido** para Português. |
+| **Fonte de Dados** | `dados_label_1.csv` | Dataset Faquad-NLI corrigido e filtrado para exemplos de alta qualidade (`label=1`). **Contexto de Entrada:** O texto da `answer` é usado como Contexto (substituto) no *prompt*. |
+| **Dataset Base** | `ruanchaves/faquad-nli` | Dataset Original (Hugging Face Hub) utilizado para extração e pré-processamento dos dados QA. |
 
 ---
 
@@ -62,6 +72,7 @@ Acurácia do Tipo (RQ2): É a comparação entre o target_inference_type (o que 
 ---
 
 ## Referências
+Dataset Original (Hugging Face Hub) - https://huggingface.co/datasets/ruanchaves/faquad-nli
 
 Zhu et al. (2025) — Inference Type-based Question Generation for Reading Comprehension Assessment - https://aclanthology.org/2025.bea-1.31.pdf
 
