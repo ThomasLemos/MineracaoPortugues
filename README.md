@@ -24,50 +24,43 @@ Caso queira modificar a quantidade de perguntas geradas na celula 4 modifique MA
 ---
 
 ## Fluxo Metodológico Replicado
-O experimento segue o fluxo de trabalho de prompting e avaliação proposto.
+O experimento segue rigorosamente o fluxo de trabalho de prompting e avaliação proposto.
 
 1. Preparação e Estruturação do Prompt (Few-Shot/CoT)
 Taxonomia Alvo: A geração é direcionada ao tipo de inferência: pronominal bridging.
 
-Geração CoT: O LLM é instruído a gerar explicitamente uma seção de REASONING: (Raciocínio) antes da pergunta.
+Geração CoT: O LLM é instruído a gerar explicitamente uma seção de RACIOCÍNIO: (Chain-of-Thought) antes da pergunta.
 
-Prompt Estruturado: O prompt final é encapsulado no formato de conversação (<|user|><|assistant|>) e alimentado com o context e o expected_answer do dataset FairytaleQA.
+Controle de Idioma: O template Few-Shot/CoT está integralmente em Português, forçando a geração de todo o output no idioma local.
+
+Entrada de Dados: O prompt final é encapsulado no formato de conversação (<|user|><|assistant|>) e alimentado com o Contexto (a resposta do CSV) e o expected_answer.
 
 2. Geração de Pergunta (Question Generation - QG) e Detalhes do Modelo
 A Geração QG é realizada por um LLM instrucional, simulando o processo de raciocínio.
 
 Modelo Utilizado: Phi-3-mini-4k-instruct (Microsoft).
 
-Características do Modelo:
-
-Tamanho: 3.8 Bilhões de parâmetros.
-
-Otimização: Treinado para seguir Instruções (Instruct), o que o torna ideal para a tarefa de CoT e aderência a regras de formato.
-
-Vantagem: É o maior modelo de código aberto que pode ser rodado de forma viável em GPUs de consumo médio (ou Google Colab), oferecendo um equilíbrio entre inteligência e leveza.
-
-Parsing (RQ3 - Qualidade do Raciocínio): Um módulo de Expressões Regulares (Regex) extrai o generated_question_stem e o generated_reasoning_cot. O sucesso desta extração é crucial para validar a Qualidade do CoT.
+Características: 3.8 Bilhões de parâmetros. Otimizado para seguir Instruções (Instruct), ideal para a tarefa de CoT e aderência a regras de formato.
 
 3. Classificação e Avaliação do Tipo (RQ2)
 Modelo de Classificação: BERT for Sequence Classification (curious008/BertForStorySkillClassification).
 
-Avaliação do Skill (RQ2): O classificador BERT categoriza o item gerado em um dos 7 Narrative Elements (e.g., Character, Setting).
+Avaliação do Skill (RQ2): O classificador BERT categoriza o item gerado em um dos 7 Narrative Elements.
 
 Métrica de Sucesso: A Acurácia do Tipo de Inferência é determinada pela comparação entre o tipo alvo (pronominal bridging) e o predicted_skill_label (classificado pelo BERT).
 
-4. **Armazenamento dos resultados**  
-Os resultados são salvos em formato JSON, como mostrado em `example_qg_classification_result_phi3.json`.
+4. Armazenamento dos resultados
+Os resultados são salvos em formato JSON (faquad_qg_classification_results.json).
 
 --
 
 ## Análise de Resultados e Observações
-O arquivo de saída (example_qg_classification_result_phi3.json) permite analisar as seguintes métricas, que refletem os achados do artigo base:
+O arquivo de saída permite analisar as seguintes métricas, que refletem os achados do artigo base:
 
-Aderência ao Formato (RQ3): Observa-se se a tag generated_reasoning_cot_rq3 foi preenchida corretamente ou se o LLM falhou e gerou "Parsing Geral Falhou." (indicando que o LLM priorizou o conteúdo em detrimento do formato rígido do CoT).
-
-Qualidade da Pergunta (RQ1): Verifica-se se o generated_question_stem_rq1 é uma pergunta sintaticamente válida e coerente com o contexto da história.
-
-Acurácia do Tipo (RQ2): É a comparação entre o target_inference_type (o que pedimos) e o predicted_skill_label (o que o classificador BERT detectou). Desvios altos nesta métrica validam a dificuldade em obter itens com alvo específico.
+| Métrica | Implicação Metodológica | Observações Típicas (Validação) |
+| Aderência ao Formato (RQ3 - Parsing) | Valida a força do prompt Few-Shot/CoT na replicação da estrutura formal. | Alto Sucesso: O LLM adere às tags RACIOCÍNIO: e PERGUNTA: corretamente. |
+| Qualidade da Pergunta (RQ1 - Coerência) | Avalia a coerência da pergunta gerada com o Contexto real.| "Falha de Coerência (Alucinação): O LLM falha em aplicar a inferência ao novo Contexto (CIENCIA_DA_COMPUTACAO), alucinando um tópico genérico (""biblioteca"") no Raciocínio gerado." |
+Acurácia do Tipo (RQ2 - Desvio) | Avalia se a pergunta gerada corresponde ao tipo de inferência alvo. | "Desvio Alto: Confirma a dificuldade do método: a pergunta gerada não corresponde ao tipo de inferência alvo, sendo classificada como Outcome Resolution." |
 
 ---
 
